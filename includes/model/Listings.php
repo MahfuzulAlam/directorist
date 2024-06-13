@@ -1212,6 +1212,9 @@ class Directorist_Listings {
 				$directory_term = get_term_by( 'slug', $directory, ATBDP_DIRECTORY_TYPE );
 				$directory      = $directory_term ? $directory_term->term_id : 0;
 			}
+		} else if ( ! empty( $this->directory_type ) && count( $this->directory_type ) > 0 )  {
+			$directory_term = get_term_by( 'slug', $this->directory_type[0], ATBDP_DIRECTORY_TYPE );
+			$directory      = $directory_term ? $directory_term->term_id : 0;
 		}
 	
 		if ( ! empty( $directory ) && directorist_is_directory( $directory ) ) {
