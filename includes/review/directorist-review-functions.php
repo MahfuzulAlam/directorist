@@ -46,7 +46,7 @@ function directorist_is_immediate_review_approve_enabled() {
 }
 
 /**
- * Check multiple review status.
+ * Check if multiple reviews are enabled.
  *
  * @return bool
  */
